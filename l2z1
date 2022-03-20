@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    
+for (int v=0; v<100;v++){
+if (v%3==0)printf("A number is: %d \n",v) ;
+
+}
+    return 0;
+}
