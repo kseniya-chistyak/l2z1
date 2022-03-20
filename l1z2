@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+int a=50;
+printf("Число %d\n ", a);
+float b=0.82;
+printf("Дробь %f\n ", b);
+char c='c';
+printf("Символ %d\n ", c);
+double d=-963.9;
+printf("Отрицательное %f\n ", d);
+
+int e=a/50;
+printf("%d\n ", e);
+double f=d*3;
+printf("%f\n ", f);
+float g=b+4;
+printf("%f\n ", g);
+int h=a%3;
+printf("%d\n ", h);
+return 0;
+}
