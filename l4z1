@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+ 
+ string numbers [10] = { "Ноль","Один","Два","Три","Четыре","Пять","Шесть","Семь","Восемь","Девять" };
+    int i;
+    cin >> i;
+    cout << numbers[i] << endl;
+ 
+ return 0;
+}
