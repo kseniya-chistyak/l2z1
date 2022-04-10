@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+
+using namespace std;
+ 
+double sum(double& x, double& y) {
+    return pow((x + y), 2);
+}
+double raznost(double& x, double& y) {
+    return pow ((x - y), 2);
+}
+ 
+int main() {
+    setlocale(0, "rus");
+    double x, y;
+    printf("Вводите числа ");
+    cin >> x >> y;
+    printf("Квадрат суммы равен %f\n", sum(x, y));
+    printf("Квадрат разности равен %f\n", raznost(x, y));
+    return 0;
+}
