@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main(){
+char str[5];
+cin >> str;
+int n = 0;
+ while (n < strlen(str)){
+int ascii = (int)str[n];
+if (ascii == 5)
+ascii = (int)str[n] - 0;
+else ascii = (int)str[n] + 1;
+++n;
+ cout << (char)ascii;}
+  return 0;
+}
