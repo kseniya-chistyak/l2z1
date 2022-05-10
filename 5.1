@@ -1,22 +1,19 @@
-#include <stdio.h>
-#include <math.h>
 #include <iostream>
 
-using namespace std;
- 
-double sum(double& x, double& y) {
-    return pow((x + y), 2);
+using namespace std ;
+
+float SquaredSum(float a, float b,float result)
+{
+    result=(a+b)*(a+b);
+    return result;
 }
-double raznost(double& x, double& y) {
-    return pow ((x - y), 2);
-}
- 
-int main() {
-    setlocale(0, "rus");
-    double x, y;
-    printf("Вводите числа ");
-    cin >> x >> y;
-    printf("Квадрат суммы равен %f\n", sum(x, y));
-    printf("Квадрат разности равен %f\n", raznost(x, y));
-    return 0;
+
+int main ()
+{
+    float c,d,result;
+    cout<<"Введите первое дробное число\n";
+    cin>>c;
+    cout<<"Введите второе дробное число\n";
+    cin>>d;
+    cout<<"Результат - "<<SquaredSum(c,d,result)<<"\n";
 }
