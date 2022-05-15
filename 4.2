@@ -1,17 +1,22 @@
 #include <iostream>
-#include <cstring>
+#include <cstring> //библиотека для функции strlen
+
 using namespace std;
 
-int main(){
-char str[5];
-cin >> str;
-int n = 0;
- while (n < strlen(str)){
-int ascii = (int)str[n];
-if (ascii == 5)
-ascii = (int)str[n] - 0;
-else ascii = (int)str[n] + 1;
-++n;
- cout << (char)ascii;}
-  return 0;
+int main()
+{
+    int a, i=0,*d; //указатель на переменную
+    char x[80]; //место для хранения 80 символов
+    cout << "Ввод символов" << "\n";
+    cin >> x;//ввод строки х
+    cout<<"Результат - ";//вывод
+    a = strlen(x);//х это строка.функция strlen в данном случаем возвращает длину строки,на которую указывает х
+    while (2) { //тело цикла
+        d=(int *) &x[i];// элемент & является ссылкой на адрес строхи х элемента i
+        (*d)++;//задали шаг 1
+        cout<<x[i];//вывод элемента из строки х
+        if(a==i) break;
+        i++;
+    }
+    return 0;
 }
