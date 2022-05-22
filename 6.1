@@ -1,15 +1,17 @@
-#include <stdio.h>
+#include <iostream>
 #include <cstring>
- 
-int main ()
+using namespace std;
+int a,b,i=1,n=12;
+void reverse(char a[])
 {
-    char* str = "spring";
-    int i, len;
-    len = strlen(str);
-    char* str1 = new char [len];
-    for (i=0; i<len; i++)
-        str1[i] = str[len-i-1];
-    str1[i]='\0';
-    puts (str1);
+    int b=strlen(a);
+    for (int i=1;i<=b;i++){
+  cout <<a[n-i] ;}
+}
+int main()
+{
+   
+    char a[] = "Test  string";
+    reverse (a);
     return 0;
 }
