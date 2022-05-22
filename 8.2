@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class CreditCard {
+public:
+    int Number;
+    int Balance;
+    CreditCard(int a, int b) {
+        this->Number = a;
+        this->Balance = b;
+    }
+};
+
+int Transfer(CreditCard Ivan, CreditCard Cemen, int V){
+        if(Ivan.Balance<V){
+            cout << "Недостаточный баланс!"<< endl;
+            
+        }
+        else if(Ivan.Number==Cemen.Number){
+            cout << "Ошибка! Номера карт совпадают"<< endl;
+            
+        }
+        else{
+            int a=Ivan.Balance-V;
+            int b=Cemen.Balance+V;
+            cout << "Успешно. Остатки на картах: (Ivan) "<< a <<" , (Cemen) " << b << endl;
+        }
+        return 0;
+    }
+    
+int main(){
+    CreditCard Alpha(2345, 180);
+    CreditCard Bravo(1732, 50);
+    CreditCard Gamma(1732, 15);
+
+
+    Transfer(Bravo, Alpha, 60);  
+    Transfer(Bravo, Gamma, 10);  
+    Transfer(Bravo, Alpha, 30); 
+    return 0;
+}
