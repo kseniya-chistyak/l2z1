@@ -1,34 +1,30 @@
 #include <iostream>
 using namespace std;
+class CreditCard {
+public:
 
-
-
-class CreditCard 
-{
-        public:// открытые данные
-    int Number;// 1 свойство номер карта из 4 цифр
-    float Balance;// 2 свойство указывает баланс карты 
-    CreditCard (int a, float b) {Number = a, Balance = b;}
-    
-
-    void Take(float d)
+    int Number;
+    float Balance;
+    CreditCard
+    (int  a = 1234, float b = 50 )
     {
-        Balance = -d;
-        
-    }
+      Number = a;
+        Balance = b;}
+    float Put(float v) {
+       return Balance = Balance + v;};
+      
     
-    void Put(float c)
-    {
-        Balance = +c;
-    } 
-    
+    float Take(float v) {
+        return Balance = Balance - v;};
+      
 };
-int main()// точка входа в программу 
+int main()
 {
     CreditCard firstCC(1234, 50);
-    firstCC.Put(300);
+    CreditCard * cart=&firstCC;
+    cart->Put(70);
     cout << firstCC.Balance << endl;
-    firstCC.Take(200);
+    cart->Take(90);
     cout << firstCC.Balance << endl;
     
     return 0;
