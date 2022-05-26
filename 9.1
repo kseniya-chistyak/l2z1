@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class a {
+private:
+char b [10];
+public:
+a (char* z) {
+strcpy (b, z);
+}
+a& operator ++ (int) {
+for (int i = 0; b[i]; i ++) b[i] ++;
+return *this;
+}
+a& operator -- (int) {
+for (int i = 0; b[i]; i ++) b[i] --;
+return *this;
+}
+float out() {
+cout << b << endl;
+}
+};
+int main () {
+a bb("abc123");
+bb ++;
+bb.out();
+bb --;
+bb.out();
+
+return 0;
+}
