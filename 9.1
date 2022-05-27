@@ -1,33 +1,26 @@
 #include <iostream>
-#include <string.h>
-
 using namespace std;
 
-class a {
+class str {
 private:
-char b [10];
-public:
-a (char* z) {
-strcpy (b, z);
-}
-a& operator ++ (int) {
-for (int i = 0; b[i]; i ++) b[i] ++;
-return *this;
-}
-a& operator -- (int) {
-for (int i = 0; b[i]; i ++) b[i] --;
-return *this;
-}
-float out() {
-cout << b << endl;
-}
+string text [200];
 };
-int main () {
-a bb("abc123");
-bb ++;
-bb.out();
-bb --;
-bb.out();
 
+string operator ++(string text){
+for(int i=0; i<text.length(); i++)
+text[i] = text[i]+1;
+return text;
+}
+string operator --(string text){
+for(int i=0; i<text.length(); i++)
+text[i] = text[i]-1;
+return text;
+}
+
+int main(){
+string text = "abc123";
+cout << ++text << endl;
+cout << --text << endl;
 return 0;
 }
+
