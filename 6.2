@@ -1,18 +1,21 @@
 #include <iostream>
 using namespace std;
-int a;
-void print(int a)
-{cout<<a<<endl;}
-void print( float a)
-{cout<<a<<endl;}
-void print( char a)
-{cout<<a<<endl;}
-void print(int a,int b)
-{cout<<a<< ":"<< b<<endl;}
+void print(int p){
+cout << p << endl;
+}
+void print(float p){
+cout << p << endl;
+}
+void print(char p){
+cout << p << endl;
+}
+void print(int p, int t){
+cout << p << t << endl;
+}
 int main(){
-	print(10);
-	print(float(1.1));
-	print('a');
-	print(1, 2);
-	return 0;
+print(10);
+print(float(1.1));
+print('a');
+print(1, 2);
+return 0;
 }
