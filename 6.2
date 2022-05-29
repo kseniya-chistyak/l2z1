@@ -1,21 +1,13 @@
 #include <iostream>
 using namespace std;
-void print(int p){
-cout << p << endl;
-}
-void print(float p){
-cout << p << endl;
-}
-void print(char p){
-cout << p << endl;
-}
-void print(int p, int t){
-cout << p << t << endl;
-}
+void f1(int p){ cout << p << endl;}
+void f2(double p){cout << p << endl;}
+void f3(char p){cout << p << endl;}
+void f4(int p, int t){cout << p << t << endl;}
 int main(){
-print(10);
-print(float(1.1));
-print('a');
-print(1, 2);
+f1(8);
+f2(double(1.5));
+f3('abc123');
+f4(5, 8);
 return 0;
 }
