@@ -1,0 +1,31 @@
+1 cтрочка Программа запрашивает у пользователя число n и выводит в файл square.txt квадрат символами “+”, сторона которого состоит из n символов.
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+ofstream out("C:\\square.txt");
+
+
+int n,t,c;
+std::cin >> n;
+
+t=1;
+
+while(t<=n)
+{
+c=1;
+out << ("\n");
+while (c<=n)
+{
+out << ("+");
+c++;
+}
+t++;
+}
+out.close();
+
+return 0;
+}
