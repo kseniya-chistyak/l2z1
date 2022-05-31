@@ -1,0 +1,28 @@
+1 строчка .Программа запрашивает число и сохраняет его в массив numbers (вмещает до 10 элементов).
+Если введено отрицательное число или массив заполнился, 
+запросы прекращаются и на экран выводится среднее арифметическое элементов массива.
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+int n;
+int i=0;
+
+float numbers[10], sum=0;
+int size = sizeof(numbers)/sizeof(numbers[0]);
+while(i < size){
+cout << "Введите элемент массива:\n";
+cin >> numbers[i];
+
+if(numbers[i] < 0){
+break;
+}
+sum +=numbers[i];
+i++;
+}
+cout << "Среднее арифметическое:\n" << sum/size << endl;
+
+return 0;
+}
